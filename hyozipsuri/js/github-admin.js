@@ -1,6 +1,6 @@
 window.HyoRemote = (function () {
   const TOKEN_KEY = "hyo.gh";
-  const SITE_URL = "https://fellma.github.io/hyozipsuri/";
+  const SITE_URL = "https://hyosungmwk.github.io/hyozipsuri/";
   let mode = "server";
   let vault = null;
   let token = "";
