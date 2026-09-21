@@ -520,9 +520,46 @@ body {
   line-height: 1.5;
 }
 
-.blog-cta .btn {
+.blog-links {
+  display: grid;
+  gap: 10px;
   max-width: 280px;
   margin: 0 auto;
+}
+
+.blog-cta .btn {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  gap: 10px;
+}
+
+.blog-cta .btn.ghost.dark {
+  color: var(--wood-dark);
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.blog-ico {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.blog-ico.naver {
+  background: #03c75a;
+  color: #fff;
+}
+
+.blog-ico.wp {
+  background: var(--wood-dark);
+  color: #fff;
 }
 
 .filters {
