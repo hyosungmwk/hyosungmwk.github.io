@@ -74,58 +74,67 @@
 
     <dl class="meta">
       <dt>시행일</dt>
-      <dd>2026년 9월 5일</dd>
-      <dt>운영자 연락처</dt>
-      <!-- 콘솔에 URL을 올리기 전에 아래 플레이스홀더를 본인 이메일로 교체하세요. 가짜 주소를 넣지 마세요. -->
+      <dd>2026년 9월 29일</dd>
+      <dt>앱</dt>
+      <dd>ALTEMA OFFLINE, 버전 0.1.0-openbeta</dd>
+      <dt>개인정보처리자</dt>
+      <dd>알테마 오프라인 운영자</dd>
+      <dt>문의</dt>
+      <!-- Play 콘솔에 올리기 전에 아래 표시를 본인 이메일로 바꾸세요. 주소를 지어 넣지 마세요. -->
       <dd>[운영자 이메일]</dd>
     </dl>
 
-    <p>본 방침은 오프라인 2D 오픈월드 RPG 앱 「알테마 오프라인」(이하 “앱”)이 이용자의 정보를 어떻게 다루는지 알리기 위한 것입니다. 앱은 기기에서만 동작하며, 운영자가 운영하는 게임 서버·계정 시스템은 없습니다.</p>
+    <p>이 방침은 오프라인 2D 오픈월드 RPG 「알테마 오프라인」(이하 “앱”)이 이용자의 정보를 어떻게 다루는지 설명합니다. 앱은 이용자의 기기 안에서만 진행되며, 운영자가 운영하는 게임 서버·회원 계정·클라우드 저장소는 없습니다.</p>
 
-    <h2>1. 수집하는 개인정보</h2>
-    <p><strong>운영자는 이용자의 개인정보를 수집하지 않습니다.</strong> 이름·이메일·전화번호·위치·광고 식별자·결제 정보 등을 앱이 운영자에게 전송하지 않습니다.</p>
-    <p>캐릭터 생성 시 입력하는 이름은 게임 속 가상의 여행자 이름이며, 계정이나 실명 확인에 쓰이지 않습니다. 이 값도 아래 로컬 세이브에만 남습니다.</p>
+    <h2>1. 처리하는 개인정보</h2>
+    <p><strong>운영자는 이용자의 개인정보를 수집하지 않습니다.</strong> 이름, 이메일, 전화번호, 생년월일, 위치, 연락처, 사진, 음성, 광고 식별자, 결제 정보를 앱이 운영자에게 보내지 않습니다.</p>
+    <p>캐릭터를 만들 때 입력하는 이름은 게임 속 여행자 이름입니다. 본인 확인이나 계정에 쓰이지 않으며, 아래 로컬 세이브에만 남습니다.</p>
 
-    <h2>2. 로컬 세이브 (기기에만 저장)</h2>
-    <p>게임 진행 데이터는 해당 기기의 웹뷰 <strong>localStorage</strong>에만 저장됩니다. 클라우드 동기화, 서버 백업, 계정 연동은 없습니다.</p>
+    <h2>2. 기기에만 남는 세이브</h2>
+    <p>진행 데이터는 그 기기의 웹뷰 <strong>localStorage</strong>에만 저장됩니다. 다른 기기와 동기화되지 않고, 운영자 서버로 업로드되지 않습니다.</p>
     <ul>
-      <li>저장 예: 슬롯·캐릭터 외형·인벤토리·위치·퀘스트 등 플레이 상태</li>
-      <li>저장 키 예: <code>altema-offline-slots</code> (이전 버전 키는 마이그레이션용으로만 읽음)</li>
+      <li>예: 저장 슬롯, 캐릭터 이름·외형, 능력치·스킬, 소지품, 위치, 퀘스트, 언어 설정</li>
+      <li>저장 키: <code>altema-offline-slots</code>. 이전 버전 키는 그 기기에서 세이브를 이어 읽을 때만 사용합니다.</li>
     </ul>
-    <p>Android 시스템 백업(<code>allowBackup</code>)이 켜져 있으면, 이용자가 기기 백업을 사용하는 경우 앱 데이터가 이용자 본인의 기기 백업에 포함될 수 있습니다. 이는 OS 기능이며, 운영자가 백업 서버를 두지 않습니다.</p>
+    <p>Android의 앱 백업(<code>allowBackup</code>)이 켜져 있고 이용자가 기기 백업을 쓰면, 세이브가 이용자 본인의 기기 백업에 포함될 수 있습니다. 백업은 운영체제 기능이며, 운영자가 별도의 백업 서버를 두지 않습니다.</p>
 
-    <h2>3. 권한</h2>
+    <h2>3. 처리 목적과 보유 기간</h2>
+    <p>운영자가 이용자 정보를 수집·이용·보유하지 않으므로, 처리 목적과 운영자 측 보유 기간은 없습니다. 기기에 남은 세이브는 앱을 삭제하거나 시스템 설정에서 앱 데이터를 지우면 함께 삭제됩니다.</p>
+
+    <h2>4. 사용하는 권한</h2>
     <ul>
-      <li><strong>인터넷 (INTERNET)</strong> — Capacitor/WebView 프레임워크가 기본으로 포함하는 권한입니다. 앱은 오프라인 게임이며, 게임 진행을 위한 서버 접속·계정·온라인 멀티플레이는 없습니다.</li>
-      <li><strong>화면 유지 (WAKE_LOCK)</strong> — 플레이 중 화면이 꺼지지 않도록 쓰는 기기 권한입니다. 개인정보를 수집하지 않습니다.</li>
+      <li><strong>인터넷 (INTERNET)</strong> — Capacitor와 WebView가 기본으로 포함하는 권한입니다. 게임 진행을 위한 서버 접속, 계정, 온라인 플레이에는 쓰지 않습니다.</li>
+      <li><strong>화면 유지 (WAKE_LOCK)</strong> — 플레이 중 화면이 꺼지지 않게 하는 기기 권한입니다. 개인정보를 수집하지 않습니다.</li>
     </ul>
-    <p>위치, 카메라, 마이크, 주소록, 외부 저장소, 광고 ID 등 다른 민감 권한은 사용하지 않습니다.</p>
+    <p>위치, 카메라, 마이크, 주소록, 저장소, 알림, 광고 ID 권한은 사용하지 않습니다.</p>
 
-    <h2>4. 제3자 제공·광고·분석</h2>
-    <p>운영자는 개인정보를 제3자에게 제공하지 않습니다. 계정, Firebase, 분석·크래시 리포트 SDK는 연결되어 있지 않습니다.</p>
-    <p>화면에 “AdMob 배너 자리”로 보이는 영역은 <strong>광고 SDK가 아닌 자리표시</strong>입니다. AdMob 등 광고 네트워크가 설치되어 있지 않으므로, 광고를 통해 개인정보를 수집하지 않습니다.</p>
+    <h2>5. 제3자 제공, 처리 위탁, 국외 이전</h2>
+    <p>운영자는 개인정보를 제3자에게 제공하지 않고, 처리 업무를 위탁하지 않으며, 국외로 이전하지 않습니다. 회원 가입, Firebase, 분석, 오류 보고 SDK는 연결되어 있지 않습니다.</p>
+    <p>화면의 “AdMob 배너 자리”는 광고가 아닙니다. 광고 SDK가 포함되어 있지 않으므로, 광고 네트워크가 이 앱을 통해 이용자 정보를 수집하지 않습니다. 인앱 결제도 없습니다.</p>
 
-    <h2>5. 보관 및 파기</h2>
-    <p>기기에 남은 세이브는 앱을 삭제하거나 시스템 설정에서 앱 데이터를 지우면 함께 삭제됩니다. 운영자가 보관하는 이용자 데이터는 없습니다.</p>
+    <h2>6. 정보주체의 권리</h2>
+    <p>운영자가 보관하는 개인정보가 없습니다. 세이브를 지우려면 기기에서 앱을 삭제하거나 앱 저장공간을 지우면 됩니다. 이 방침에 대한 질문은 아래 연락처로 보낼 수 있습니다.</p>
 
-    <h2>6. 아동</h2>
-    <p>앱은 만 13세 미만 아동을 대상으로 개인정보를 수집하지 않습니다. 운영자에게 전송되는 개인정보가 없으므로 별도의 부모 동의 절차도 없습니다.</p>
+    <h2>7. 아동</h2>
+    <p>앱은 만 14세 미만 아동의 개인정보를 수집하지 않습니다. 운영자에게 전송되는 개인정보가 없으므로 별도의 법정대리인 동의 절차도 없습니다.</p>
 
-    <h2>7. 방침의 변경</h2>
-    <p>수집 항목이나 광고·분석 SDK가 추가되면 본 방침을 고치고, 이 페이지의 시행일을 갱신합니다. 중요한 변경이 있으면 앱 소개 또는 이 페이지에 알립니다.</p>
+    <h2>8. 안전성 확보</h2>
+    <p>이용자 정보가 운영자 서버에 모이지 않습니다. 세이브는 해당 기기의 앱 저장 공간에만 있으며, 앱을 지우면 함께 사라집니다.</p>
 
-    <h2>8. 문의</h2>
-    <p>본 방침이나 앱의 정보 처리에 대한 문의는 아래로 보내 주십시오.</p>
-    <!-- 콘솔에 URL을 올리기 전에 아래 플레이스홀더를 본인 이메일로 교체하세요. -->
+    <h2>9. 방침의 변경</h2>
+    <p>개인정보를 새로 수집하거나 광고·분석 도구를 넣게 되면 이 방침을 고치고 시행일을 바꿉니다. 중요한 변경은 이 페이지에 적습니다.</p>
+
+    <h2>10. 문의</h2>
+    <p>개인정보 처리에 관한 문의는 아래로 보내 주십시오.</p>
     <p>[운영자 이메일]</p>
 
     <section class="en" lang="en">
       <h2>English summary</h2>
-      <p>Altema Offline (<code>com.hyo.altemaoffline</code>) is an offline game. The operator does not collect personal information, run accounts, or host a game server. Progress is stored only in on-device localStorage. INTERNET is a Capacitor/WebView default and is not used for gameplay accounts. The on-screen AdMob banner is a placeholder; no ads SDK is included. Data is removed when the app is uninstalled. Effective date: 2026-09-05. Contact: [operator email].</p>
+      <p>Altema Offline (<code>com.hyo.altemaoffline</code>, version 0.1.0-openbeta) is an offline game. The operator does not collect personal information, run accounts, process payments, or host a game server. Progress, including the in-game character name, is stored only in on-device localStorage and is deleted when the app or its data is removed. INTERNET is a Capacitor/WebView default and is not used for accounts or online play. WAKE_LOCK only keeps the screen on. The on-screen AdMob area is a placeholder; no advertising, analytics, or crash-reporting SDK is included. There is no sale, sharing, or overseas transfer of personal data. Effective date: 2026-09-29. Contact: [operator email].</p>
     </section>
 
     <footer>
-      <p class="note">이 파일은 Google Play 「개인정보처리방침 URL」용 HTML입니다. 콘솔에는 <strong>https://</strong>로 시작하는 공개 주소가 필요합니다. 로컬 파일 경로만으로는 등록할 수 없습니다.</p>
+      <p class="note">Google Play의 개인정보처리방침에는 <strong>https://</strong>로 열리는 공개 주소가 필요합니다. 이 파일을 웹에 올린 뒤 그 주소를 콘솔에 넣으세요. <code>[운영자 이메일]</code>은 올리기 전에 실제 메일 주소로 바꾸세요.</p>
     </footer>
   </main>
 </body>
